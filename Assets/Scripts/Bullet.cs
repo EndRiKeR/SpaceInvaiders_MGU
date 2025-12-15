@@ -5,7 +5,6 @@ public class Bullet : MonoBehaviour
 {
     private int _damage = 30;
     private float _speed = 10f;
-    public float _test = 100f;
 
     void FixedUpdate()
     {
@@ -14,7 +13,6 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        var myBullet = other.GetComponent<Bullet>();
 
         // enemy
         if (other.gameObject.TryGetComponent<Enemy>(out var enemy))
